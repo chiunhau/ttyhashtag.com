@@ -1,0 +1,34 @@
+/* IMPORTANT:
+Automatically import by sass-resources-loader. No worry bro.
+*/
+
+/* VARIABLES
+All your sass variable should be declared here
+*/
+
+$brand-red: #FF1633;
+$brand-deepgray: #28282A;
+
+
+/* MIXINS
+All your sass mixins should be declared here
+*/
+
+@mixin for-size($size) {
+  @if $size == phone {
+    @media (max-width: 599px) { @content; }
+  }
+  @else if $size == tablet {
+    @media (min-width: 600px) { @content; }
+  }
+  @else if $size == tablet-more {
+    @media (min-width: 780px) { @content; }
+  }
+  @else if $size == desktop {
+    @media (min-width: 1024px) { @content; }
+  }
+}
+
+/* FUNCTIONS
+All your sass functions should be declared here
+*/

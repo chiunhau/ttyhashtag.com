@@ -1,0 +1,9 @@
+/*
+The file collects all the `shared styles` that doesn't rely on
+a Component. This scss file would be `@import` by `components/index.scss`
+one time, and is available for the whole.
+*/
+
+@import 'base';
+@import 'grid';
+@import 'buttons';
