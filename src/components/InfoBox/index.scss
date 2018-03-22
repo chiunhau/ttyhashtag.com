@@ -1,0 +1,65 @@
+.info-box {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: 0.5s;
+
+  .box {
+    position: absolute;
+    width: 70%;
+    height: 80%;
+    // background-color: #e4007f;
+    border-radius: 8px;
+    top: 32px;
+    left: 236px;
+    opacity: 0;
+    transition: 0.5s;
+
+    .page {
+      padding: 40px 120px;
+      color: #e4007f;
+
+      h2 {
+        margin-bottom: 20px;
+      }
+
+      p {
+        font-weight: 400;
+        margin-bottom: 20px;
+        line-height: 1.618;
+      }
+    }
+  }
+
+  .cancel {
+    position: relative;
+    float: right;
+    margin-top: 36px;
+    margin-right: 100px;
+
+    img {
+      position: absolute;
+      opacity: 0;
+      transform-origin: center;
+      transition: 0.5s;
+
+      &:hover {
+        cursor: pointer;
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  &.-active {
+    .box {
+      opacity: 1;
+    }
+
+    .cancel {
+      img {
+        opacity: 1;
+
+      }
+    }
+  }
+}

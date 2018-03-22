@@ -1,12 +1,15 @@
 import React, { Component } from 'react';
+import Hamburger from '../Hamburger';
+import InfoBox from '../InfoBox';
 import './index.scss';
 
 class App extends Component {
 
   render() {
     return (
-      <div className="">
-        test
+      <div className="app">
+        <Hamburger/>
+        <InfoBox/>
       </div>
     );
   }
