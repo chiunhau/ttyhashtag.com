@@ -5,7 +5,7 @@ const mapStateToProps = (state, ownProps) => ({
 })
 
 const mapDispatchToProps = (dispatch) => ({
-
+  handleSetColor: color => dispatch({type: 'SET_COLOR', color: color})
 })
 
 export default connect(

@@ -5,6 +5,9 @@ import Canvas from '../Canvas';
 import './index.scss';
 
 class App extends Component {
+  componentDidMount() {
+    window.sketchIsActive = true;  
+  }
 
   render() {
     return (

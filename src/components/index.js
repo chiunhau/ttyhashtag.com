@@ -7,12 +7,7 @@ import ReduxThunk from 'redux-thunk';
 import './index.scss';
 import App from './App';
 import appReducer from './App/reducer';
-
-const createStoreWithMiddleware = applyMiddleware(
-  ReduxThunk
-)(createStore);
-
-const appStore = createStoreWithMiddleware(appReducer, typeof(window) !== 'undefined' && window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
+import appStore from './store';
 
 ReactDOM.render(
   <Provider store={appStore}>

@@ -4,6 +4,7 @@ import './index.scss';
 class InfoBox extends Component {
   handleCloseInfobox = () => {
     this.props.onCloseInfobox();
+    window.sketchIsActive = true;
   }
 
   render() {
