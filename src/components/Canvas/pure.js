@@ -47,9 +47,9 @@ class Sandbox extends Component {
         <div id="canvas2">
         </div>
         <div className="colors">
-          <div className="color -blue" onClick={() => this.onSetColor('#00f')} onMouseEnter={this.handleMouseEnter} onMouseLeave={this.handleMouseLeave}></div>
-          <div className="color -pink" onClick={() => this.onSetColor('#e4007f')} onMouseEnter={this.handleMouseEnter} onMouseLeave={this.handleMouseLeave}></div>
-          <div className="color -white" onClick={() => this.onSetColor('#e9ebee')} onMouseEnter={this.handleMouseEnter} onMouseLeave={this.handleMouseLeave}></div>
+          <div className={`color -blue ${brushColor === '#00f' ? '-active' : ''}`} onClick={() => this.onSetColor('#00f')} onMouseEnter={this.handleMouseEnter} onMouseLeave={this.handleMouseLeave}></div>
+          <div className={`color -pink ${brushColor === '#e4007f' ? '-active' : ''}`} onClick={() => this.onSetColor('#e4007f')} onMouseEnter={this.handleMouseEnter} onMouseLeave={this.handleMouseLeave}></div>
+          <div className={`color -white ${brushColor === '#e9ebee' ? '-active' : ''}`} onClick={() => this.onSetColor('#e9ebee')} onMouseEnter={this.handleMouseEnter} onMouseLeave={this.handleMouseLeave}></div>
           <Slider
             min={10}
             max={40}

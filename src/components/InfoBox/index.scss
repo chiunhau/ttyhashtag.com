@@ -8,7 +8,8 @@
   .box {
     position: absolute;
     width: 70%;
-    height: 80%;
+    height: 90%;
+    overflow-y: auto;
     // background-color: #e4007f;
     border-radius: 8px;
     top: 32px;
@@ -22,6 +23,10 @@
 
       h2 {
         margin-bottom: 20px;
+      }
+
+      h3 {
+        margin-top: 16px;
       }
 
       p {

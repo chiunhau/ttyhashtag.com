@@ -6,7 +6,8 @@ const mapStateToProps = (state, ownProps) => ({
 })
 
 const mapDispatchToProps = (dispatch) => ({
-  onOpenInfobox: () => dispatch({type: "OPEN_INFOBOX"})
+  onOpenInfobox: () => dispatch({type: "OPEN_INFOBOX"}),
+  onSetActivePage: pageNumber => {dispatch({type: 'SET_ACTIVE_PAGE', pageNumber})}
 })
 
 export default connect(

@@ -1,5 +1,6 @@
 let init = {
-  isActive: false
+  isActive: false,
+  activePage: 1
 }
 
 export default (state = init, action) => {
@@ -8,7 +9,8 @@ export default (state = init, action) => {
       return {...state, isActive: true}
     case 'CLOSE_INFOBOX':
       return {...state, isActive: false}
-
+    case 'SET_ACTIVE_PAGE':
+      return {...state, activePage: action.pageNumber}
     default:
       return state
   }

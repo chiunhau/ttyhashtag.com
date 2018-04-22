@@ -54,6 +54,19 @@
         width: 100%;
       }
     }
+
+    .fb a {
+      font-size: 18.2px;
+      color: #0000ff;
+
+      &:hover {
+        color: #e4007f;
+      }
+
+      &:hover:after {
+        width: 100%;
+      }
+    }
   }
 
   &:hover {
@@ -82,6 +95,15 @@
       color: #fff;
       padding: 40px;
       top: 12px;
+
+      .fb a {
+        font-size: 18.2px;
+        color: #fff;
+
+        &:hover {
+          color: #e4007f;
+        }
+      }
     }
   }
 }
