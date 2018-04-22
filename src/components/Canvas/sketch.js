@@ -6,6 +6,8 @@ const s = function(p5) {
   var pink, blue, eraser;
   var currentColor = 0;
   var colors = [];
+  var img;
+
 
   p5.setup = () => {
     console.log('setup');
@@ -14,7 +16,6 @@ const s = function(p5) {
   }
 
   p5.draw = () => {
-
   }
 
   p5.mousePressed = () => {
@@ -31,10 +32,12 @@ const s = function(p5) {
 
 
   function paint(centerX, centerY) {
-    for(var i = 0; i < 1000; i ++) {
+    let brushSize = store.getState().canvas.brush * 2 - 20 ;
+    let brushAmount= Math.pow(store.getState().canvas.brush, 2) + 100;
+    for(var i = 0; i < brushAmount; i ++) {
       p5.noStroke();
       p5.fill(store.getState().canvas.color);
-      p5.ellipse(centerX + p5.randomGaussian(0, 35)  , centerY + p5.randomGaussian(0, 35) , 1, 1);
+      p5.ellipse(centerX + p5.randomGaussian(0, brushSize)  , centerY + p5.randomGaussian(0, brushSize) , 1, 1);
     }
   }
 }

@@ -6,7 +6,7 @@ import './index.scss';
 
 class App extends Component {
   componentDidMount() {
-    window.sketchIsActive = true;  
+    window.sketchIsActive = true;
   }
 
   render() {

@@ -1,4 +1,5 @@
 .canvas {
+  cursor: crosshair;
   .logo {
     position: absolute;
     left: 0;
@@ -7,6 +8,11 @@
     top: 50%;
     transform: translateY(-50%);
     width: 400px;
+    pointer-events: none;
+
+    @include for-size(phone) {
+      width: 90%;
+    }
   }
 
   canvas {
@@ -20,7 +26,7 @@
   .colors {
     position: absolute;
     padding: 10px;
-    left: 0;
+    left: 12px;
     top: 50%;
     transform: translateY(-50%);
     text-align: center;
@@ -48,5 +54,33 @@
         cursor: pointer;
       }
     }
+  }
+
+  .rangeslider__labels {
+    display: none;
+  }
+
+  .rangeslider__fill {
+    background-color: #666;
+  }
+
+  .rangeslider-vertical {
+    border-radius: 4px;
+    max-width: 4px;
+    -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+       -khtml-user-select: none; /* Konqueror HTML */
+         -moz-user-select: none; /* Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome and Opera */
+  }
+
+  .rangeslider-vertical .rangeslider__handle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    left: -8px;
+    outline-style: none;
   }
 }
